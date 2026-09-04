@@ -12,8 +12,6 @@ from peft import LoraConfig, TaskType, get_peft_model
 from common import MODEL_NAME, MAX_TARGET_LEN, build_compute_metrics, build_dataset
 
 OUTPUT_DIR = "outputs/flan-t5-samsum-lora"
-
-
 def build_model():
     model = AutoModelForSeq2SeqLM.from_pretrained(MODEL_NAME)
     lora_config = LoraConfig(
